@@ -16,18 +16,17 @@ node {
                     echo "@@ Sleeping for 30 seconds"
                     sh 'sleep 30'
                     echo "@@ Finished Test 1"
+                    githubNotify(
+                        context:     'Test 1',
+                        description: 'OK',
+                        status:      'SUCCESS'
+                    )
                 }
             } catch (e) {
                 githubNotify(
                     context:     'Test 1',
                     description: 'Not OK',
                     status:      'FAILURE'
-                )
-            } finally {
-                githubNotify(
-                    context:     'Test 1',
-                    description: 'OK',
-                    status:      'SUCCESS'
                 )
             }
         },
@@ -43,18 +42,17 @@ node {
                     echo "@@ Sleeping for 60 seconds"
                     sh 'sleep 60 && exit 1'
                     echo "@@ Finished Test 2"
+                    githubNotify(
+                        context:     'Test 2',
+                        description: 'OK',
+                        status:      'SUCCESS'
+                    )
                 }
             } catch (e) {
                 githubNotify(
                     context:     'Test 2',
                     description: 'Not OK',
                     status:      'FAILURE'
-                )
-            } finally {
-                githubNotify(
-                    context:     'Test 2',
-                    description: 'OK',
-                    status:      'SUCCESS'
                 )
             }
         },
@@ -70,18 +68,17 @@ node {
                     echo "@@ Sleeping for 90 seconds"
                     sh 'sleep 90'
                     echo "@@ Finished Test 3"
+                    githubNotify(
+                        context:     'Test 3',
+                        description: 'OK',
+                        status:      'SUCCESS'
+                    )
                 }
             } catch (e) {
                 githubNotify(
                     context:     'Test 3',
                     description: 'Not OK',
                     status:      'FAILURE'
-                )
-            } finally {
-                githubNotify(
-                    context:     'Test 3',
-                    description: 'OK',
-                    status:      'SUCCESS'
                 )
             }
         },
