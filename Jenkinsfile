@@ -72,7 +72,7 @@ def commitStatus (String context, String status) {
     }
     githubNotify(
         context:     context,
-        status:      status
+        status:      status,
         description: description,
     )
 }
