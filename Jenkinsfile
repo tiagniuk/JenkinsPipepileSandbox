@@ -8,7 +8,8 @@ node {
             try {
                 stage('Test 1') {
                     githubNotify(
-                        description: 'Test 1 - Build has been scheduled.',
+                        context:     'Test 1',
+                        description: 'Build has been scheduled.',
                         status:      'PENDING'
                     )
                     echo "@@ Starting Test 1"
@@ -18,12 +19,14 @@ node {
                 }
             } catch (e) {
                 githubNotify(
-                    description: 'Test 1 - Not OK',
+                    context:     'Test 1',
+                    description: 'Not OK',
                     status:      'FAILURE'
                 )
             } finally {
                 githubNotify(
-                    description: 'Test 1 - OK',
+                    context:     'Test 1',
+                    description: 'OK',
                     status:      'SUCCESS'
                 )
             }
@@ -32,7 +35,8 @@ node {
             try {
                 stage('Test 2') {
                     githubNotify(
-                        description: 'Test 2 - Build has been scheduled.',
+                        context:     'Test 2',
+                        description: 'Build has been scheduled.',
                         status:      'PENDING'
                     )
                     echo "@@ Starting Test 2"
@@ -42,12 +46,14 @@ node {
                 }
             } catch (e) {
                 githubNotify(
-                    description: 'Test 2 - Not OK',
+                    context:     'Test 2',
+                    description: 'Not OK',
                     status:      'FAILURE'
                 )
             } finally {
                 githubNotify(
-                    description: 'Test 2 - OK',
+                    context:     'Test 2',
+                    description: 'OK',
                     status:      'SUCCESS'
                 )
             }
@@ -56,7 +62,8 @@ node {
             try {
                 stage('Test 3') {
                     githubNotify(
-                        description: 'Test 3 - Build has been scheduled.',
+                        context:     'Test 3',
+                        description: 'Build has been scheduled.',
                         status:      'PENDING'
                     )
                     echo "@@ Starting Test 3"
@@ -66,12 +73,14 @@ node {
                 }
             } catch (e) {
                 githubNotify(
-                    description: 'Test 3 - Not OK',
+                    context:     'Test 3',
+                    description: 'Not OK',
                     status:      'FAILURE'
                 )
             } finally {
                 githubNotify(
-                    description: 'Test 3 - OK',
+                    context:     'Test 3',
+                    description: 'OK',
                     status:      'SUCCESS'
                 )
             }
