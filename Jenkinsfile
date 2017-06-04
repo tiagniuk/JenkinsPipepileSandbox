@@ -9,8 +9,8 @@ node {
                 stage('Test 1') {
                     commitStatusPending 'Test 1'
                     echo "@@ Starting Test 1"
-                    echo "@@ Sleeping for 30 seconds"
-                    sh 'sleep 30'
+                    echo "@@ Sleeping for 90 seconds"
+                    sh 'sleep 90'
                     echo "@@ Finished Test 1"
                     commitStatusSuccess 'Test 1'
                 }
@@ -37,8 +37,8 @@ node {
                 stage('Test 3') {
                     commitStatusPending 'Test 3'
                     echo "@@ Starting Test 3"
-                    echo "@@ Sleeping for 90 seconds"
-                    sh 'sleep 90'
+                    echo "@@ Sleeping for 30 seconds"
+                    sh 'sleep 30'
                     echo "@@ Finished Test 3"
                     commitStatusSuccess 'Test 3'
                 }
