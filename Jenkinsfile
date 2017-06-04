@@ -41,7 +41,7 @@ node {
                     )
                     echo "@@ Starting Test 2"
                     echo "@@ Sleeping for 60 seconds"
-                    sh 'sleep 60'
+                    sh 'sleep 60 && exit 1'
                     echo "@@ Finished Test 2"
                 }
             } catch (e) {
