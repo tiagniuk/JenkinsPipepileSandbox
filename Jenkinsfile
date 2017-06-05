@@ -61,6 +61,7 @@ def commitStatusFailure (String context) {
     def status = 'FAILURE'
     commitStatus(context, status)
     currentBuild.result = status
+    throw new Exception("${context} - ${status}");
 }
 
 def commitStatus (String context, String status) {
